@@ -1,0 +1,50 @@
+.footer{
+    font-family: 'Roboto', ‘Arial’, sans-serif;;
+    text-align: center;
+    color: #F9F9F9;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: flex;   
+    bottom: 0;
+    position: fixed; 
+    height: 74px;
+    background-color: #000000;
+    max-width: 600px;
+}
+
+.footer__btn{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 33vw;
+    height: 74px;
+    color: #F9F9F9;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0;
+    outline: none;
+}
+
+
+.footer__btn:active{
+    background-color:#0077BA;
+}
+
+.footer__icon{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #F9F9F9;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
