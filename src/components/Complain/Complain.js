@@ -1,6 +1,7 @@
 import React from 'react';
 import './Complain.css';
 import Header from '../Header/Header';
+import { YMaps, Map } from 'react-yandex-maps';
 
 function Complain(props) {
     
@@ -9,9 +10,6 @@ function Complain(props) {
    <Header title="Жалоба" />
    <div className="petition">
       <form className="petition__form">
-         {/* <p className="petition__poem-text">
-            {props.location.data}
-         </p> */}
          <textarea className="petition__poem-text" value={props.location.data}/>
          <fieldset className="petition__fieldset">
          <h3 className="petition__fieldset-heading">От кого:</h3>
@@ -41,8 +39,13 @@ function Complain(props) {
          </fieldset>
          <fieldset class="petition__fieldset">
     <h3 class="petition__fieldset-heading">Укажите где</h3>
+    
+    <YMaps> 
     <div class="petition__map petition__map_visible" id="petition-map">
-    </div>
+      <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />   
+      </div>   
+  </YMaps>
+     
     <button type="button" class="button petition__address-button">Изменить адрес</button>
     <div class="petition__address">
       <label class="petition__label">
@@ -59,11 +62,7 @@ function Complain(props) {
   <button type="submit" class="button petition__submit petition__submit_disabled" disabled>Подать жалобу</button>
       </form>
    </div>
-</div>
-
-
-
-     
+</div>    
             
     );
 }
