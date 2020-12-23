@@ -12,7 +12,10 @@ function Poem(props) {
 
     return (
         <div>
-            <Link className="poem" to={{ pathname: "/complain", data: poem }} ref={poemRef} onClick={handleClick}>{poem}</Link>
+            <Link className="poem" 
+            to={{ pathname: "/complain", data: poem }} 
+            ref={poemRef} 
+            onClick={handleClick}>{poem}</Link>
         </div>
     )
 }
