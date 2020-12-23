@@ -1,15 +1,9 @@
-/* .category{
-    text-align: left;
-    min-width: 327px;
-    height: 100px;
-    background-image: url(../../images/2.jpg);
-    background-size: cover;
-    border-radius: 8px;
-    background-position: center;
-    padding: 36px 16px;
-} */
+.subcategories {
+    margin: 0;
+    padding: 120px 0;
+}
 
-.category{
+.subcategories__item {
     font-family: 'Roboto', ‘Arial’, sans-serif;
     font-style: normal;
     font-weight: bold;
