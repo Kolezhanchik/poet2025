@@ -1,34 +1,480 @@
-[
-    {
-        "poem": "Протекли за годами года, И слепому и глупому мне Лишь сегодня приснилось во сне,Что она не любила меня никогда…",
-        "id": "1"
-    },
-    {
-        "poem": "Наряду с отоплением в каждом доме существует система отсутствия. Спрятанные в стене ее беззвучные батареи наводняют жилье неразбавленной пустотой круглый год, независимо от погоды,",
-        "id": "2"
-    },
-    {
-        "poem": "Какая теплая и темная заря! Давным-давно закат, чуть тлея, чуть горя, Померк над сонными весенними полями, И мягкими на все ложится ночь тенями,",
-        "id": "3"
-    },
-    {
-        "poem": "Жарко веет ветер душный, Солнце руки обожгло, Надо мною свод воздушный, Словно синее стекло — Пруд лениво серебрится, Жизнь по-новому легка… Кто сегодня мне приснится В пестрой сетке гамака?",
-        "id": "4"
-    },
-    {
-        "poem": "Издалека долго Течет река Волга, Течет река Волга — Конца и края нет…",
-        "id": "5"
-    },
-    {
-        "poem": "Болесть да засуха, На скотину мор. Горбясь, шьёт старуха Мертвецу убор.",
-        "id": "6"
-    },
-    {
-        "poem": "Конца и края нет… Среди хлебов спелых, Среди снегов белых Течет моя Волга,",
-        "id": "7"
-    },
-    {
-        "poem": "Ветер дул. Текла вода. Пели птицы. Шли года. А из тучи к нам на землю падал дождик иногда.",
-        "id": "8"
+{
+    "response": {
+        "GeoObjectCollection": {
+            "metaDataProperty": {
+                "GeocoderResponseMetaData": {
+                    "Point": {
+                        "pos": "37.597576 55.771899"
+                    },
+                    "request": "37.597576,55.771899",
+                    "results": "10",
+                    "found": "8"
+                }
+            },
+            "featureMember": [
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "exact",
+                                "text": "Россия, Москва, 4-я Тверская-Ямская улица, 7",
+                                "kind": "house",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Москва, 4-я Тверская-Ямская улица, 7",
+                                    "postal_code": "125047",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "street",
+                                            "name": "4-я Тверская-Ямская улица"
+                                        },
+                                        {
+                                            "kind": "house",
+                                            "name": "7"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Москва, 4-я Тверская-Ямская улица, 7",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Москва",
+                                            "Locality": {
+                                                "LocalityName": "Москва",
+                                                "Thoroughfare": {
+                                                    "ThoroughfareName": "4-я Тверская-Ямская улица",
+                                                    "Premise": {
+                                                        "PremiseNumber": "7",
+                                                        "PostalCode": {
+                                                            "PostalCodeNumber": "125047"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "4-я Тверская-Ямская улица, 7",
+                        "description": "Москва, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "37.593489 55.769616",
+                                "upperCorner": "37.601699 55.774244"
+                            }
+                        },
+                        "Point": {
+                            "pos": "37.597594 55.77193"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "street",
+                                "text": "Россия, Москва, 4-я Тверская-Ямская улица",
+                                "kind": "street",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Москва, 4-я Тверская-Ямская улица",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "street",
+                                            "name": "4-я Тверская-Ямская улица"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Москва, 4-я Тверская-Ямская улица",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Москва",
+                                            "Locality": {
+                                                "LocalityName": "Москва",
+                                                "Thoroughfare": {
+                                                    "ThoroughfareName": "4-я Тверская-Ямская улица"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "4-я Тверская-Ямская улица",
+                        "description": "Москва, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "37.593327 55.771398",
+                                "upperCorner": "37.59886 55.774613"
+                            }
+                        },
+                        "Point": {
+                            "pos": "37.596103 55.773029"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Москва, Центральный административный округ, Тверской район",
+                                "kind": "district",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Москва, Центральный административный округ, Тверской район",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "district",
+                                            "name": "Центральный административный округ"
+                                        },
+                                        {
+                                            "kind": "district",
+                                            "name": "Тверской район"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Москва, Центральный административный округ, Тверской район",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Москва",
+                                            "Locality": {
+                                                "LocalityName": "Москва",
+                                                "DependentLocality": {
+                                                    "DependentLocalityName": "Центральный административный округ",
+                                                    "DependentLocality": {
+                                                        "DependentLocalityName": "Тверской район"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Тверской район",
+                        "description": "Центральный административный округ, Москва, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "37.575199 55.746836",
+                                "upperCorner": "37.634838 55.792448"
+                            }
+                        },
+                        "Point": {
+                            "pos": "37.606918 55.770127"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Москва, Центральный административный округ",
+                                "kind": "district",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Москва, Центральный административный округ",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "district",
+                                            "name": "Центральный административный округ"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Москва, Центральный административный округ",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Москва",
+                                            "Locality": {
+                                                "LocalityName": "Москва",
+                                                "DependentLocality": {
+                                                    "DependentLocalityName": "Центральный административный округ"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Центральный административный округ",
+                        "description": "Москва, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "37.51441 55.710276",
+                                "upperCorner": "37.713593 55.797108"
+                            }
+                        },
+                        "Point": {
+                            "pos": "37.614069 55.753995"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Москва",
+                                "kind": "locality",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Москва",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Москва"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Москва"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Москва",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Москва",
+                                            "Locality": {
+                                                "LocalityName": "Москва"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Москва",
+                        "description": "Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "37.326051 55.49133",
+                                "upperCorner": "37.96779 55.957565"
+                            }
+                        },
+                        "Point": {
+                            "pos": "37.617635 55.755814"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Москва",
+                                "kind": "province",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Москва",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Москва"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Москва",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Москва"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Москва",
+                        "description": "Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "36.803259 55.142221",
+                                "upperCorner": "37.96779 56.021281"
+                            }
+                        },
+                        "Point": {
+                            "pos": "37.622504 55.753215"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Центральный федеральный округ",
+                                "kind": "province",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Центральный федеральный округ",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Центральный федеральный округ"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Центральный федеральный округ",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия"
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Центральный федеральный округ",
+                        "description": "Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "30.750266 49.556986",
+                                "upperCorner": "47.641729 59.625172"
+                            }
+                        },
+                        "Point": {
+                            "pos": "38.064718 54.873745"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия",
+                                "kind": "country",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия"
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "19.484764 41.18599",
+                                "upperCorner": "191.128003 81.886117"
+                            }
+                        },
+                        "Point": {
+                            "pos": "99.505405 61.698653"
+                        }
+                    }
+                }
+            ]
+        }
     }
-]
+}
