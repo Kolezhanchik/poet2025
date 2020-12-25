@@ -5,10 +5,17 @@ import categories from "./categories.json";
 import Category from "../Category/Category";
 
 function Catalog() {
-  const category = categories.map(item => <Category key={item.id} name={item.name} poems = {item.poems} />)
+
+  const category = categories.map(item => <Category 
+    key={item.id} 
+    subcategories = {item.subcategories} 
+    name={item.name} 
+    // poems = {item.subcategories.poems} 
+    />)
+
   return (
     <div className="section">
-      <Header title="Каталог" />
+      <Header title="Каталог" />      
       <div className="catalog">
         {category}
       </div>

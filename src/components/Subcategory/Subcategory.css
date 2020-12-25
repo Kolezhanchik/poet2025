@@ -1,4 +1,9 @@
-.category{
+.subcategories {
+    margin: 0;
+    padding: 120px 0;
+}
+
+.subcategories__item {
     font-family: 'Roboto', ‘Arial’, sans-serif;
     font-style: normal;
     font-weight: bold;
