@@ -14,6 +14,18 @@
 
 Жалоба сохраняется в базе данных
 
+Как собрать проект:
+
+Клонировать репозиторий:
+
+git clone https://github.com/KoLenhen/poet2025
+
+Запустить приложение в режиме разработки:
+
+    npm install
+    npm start
+
+
 [Ссылка на проект на GitHub pages](https://kolenhen.github.io/poet2025/#/).
 
 ## Основные технологии:
