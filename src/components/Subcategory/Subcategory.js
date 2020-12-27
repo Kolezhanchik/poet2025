@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import './Subcategory.css';
 
-
 function Subcategory(props) {
-    
+
     const subcat = props.location.data.map((item) => {
         return <Link
-            className="subcategories__item"
+            className="subcategory__item"
             style={{ backgroundImage: `url(${props.location.url})`}} 
             to={{
                 pathname: "/complain",
@@ -16,14 +15,15 @@ function Subcategory(props) {
                 title: item.props.name
             }}
         >
-           <p className="sub__name"> {item.props.name}</p>
+           <p className="subcategory__name"> {item.props.name}</p>
         </Link>
     });
 
     return (
-        <div className="section">
-            <Header title={`${props.location.title}`} />
-            <div className="subcategories">
+        <div className="subcategory">            
+            <Header title={`${props.location.title}`} />            
+            <div className="subcategory__items">
+            <h2 className="subcategory__subtitile">Выберите подкатегорию</h2>  
                 {subcat}
             </div>
         </div>

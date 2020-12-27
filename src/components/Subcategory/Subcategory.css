@@ -1,9 +1,25 @@
-.subcategories {
+.subcategory{
+    position: relative;
+}
+
+.subcategory__subtitile{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;  
+    color: #F9F9F9;
+    padding: 24px 32px;
+    margin: 0;
+    text-align: left;
+}
+
+.subcategory__items {
     margin: 0;
     padding: 120px 0;
 }
 
-.subcategories__item {
+.subcategory__item {
     font-family: 'Roboto', ‘Arial’, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -26,3 +42,4 @@
     display: inline-block;
     width: 75%;
 }
+

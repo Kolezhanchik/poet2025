@@ -14,9 +14,10 @@ function Catalog() {
     />)
 
   return (
-    <div className="section">
-      <Header title="Каталог" />      
+    <div className="catalog__wrap">
+      <Header title="Каталог" />   
       <div className="catalog">
+      <h2 className="catalog__subtitile">Выберите категорию</h2>  
         {category}
       </div>
     </div>

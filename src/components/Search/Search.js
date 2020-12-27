@@ -49,7 +49,7 @@ function Search() {
             <Header title="Поиск" />
             <div className="search">
                 <form onClick={handleClick} name="search" className="form form_search_search">
-                    <h3 id="search__anchor"className="search__title">Что искать?</h3>
+                    <h3 className="search__title">Что искать?</h3>
                     <p className="search__text">
                         Ввведите в строку поиска слово(или корень слова) которое должно быть в вашем итоговом стихотворении. Вы получите список стихотворений содеражших данное слово(или корень) если таковое стихотворение было написано.
                     </p>
