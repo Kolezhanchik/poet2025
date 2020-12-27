@@ -20,7 +20,7 @@
 
 git clone https://github.com/KoLenhen/poet2025
 
-#### Запустить приложение в режиме разработки:
+####Запустить приложение в режиме разработки:
 
     npm install
     npm start
