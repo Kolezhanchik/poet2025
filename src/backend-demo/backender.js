@@ -1,4 +1,4 @@
-const backender = {
+export const backender = {
   queryUrl: 'https://sinyavsky.com/ajax/controller.php',
 
   ajax: async function (data, onSuccess) {
