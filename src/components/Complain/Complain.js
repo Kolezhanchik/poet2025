@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { YMaps, Map, ZoomControl, FullscreenControl, SearchControl, GeolocationControl, Placemark } from "react-yandex-maps";
+import { backender } from "../../backend-demo/backender";
 
 
 function Complain(props) {
@@ -17,25 +18,25 @@ function Complain(props) {
       return fetch(`https://geocode-maps.yandex.ru/1.x/?format=json&apikey=15e586b6-9e0e-4163-b84e-6eaec1f97d60&geocode=${coordString}`);
    }
 
-   useEffect(() => {   
+   useEffect(() => {
       coordString = coordinates[1] + ',' + coordinates[0];
       search()
-      .then((res) => {
-         if (res.ok) { return res.json(); }
-         return Promise.reject(res.status);
-      })
-      .then((res) => {
-         setAddress(res.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.text);
-      })
-      .catch((err) => {
-         alert(err);
-      })
+         .then((res) => {
+            if (res.ok) { return res.json(); }
+            return Promise.reject(res.status);
+         })
+         .then((res) => {
+            setAddress(res.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.text);
+         })
+         .catch((err) => {
+            alert(err);
+         })
    }, [coordinates])
 
    const onMapClick = (e) => {
       const coords = e.get("coords");
-      setMapState({center: coords})
-      setCoordsState(coords);    
+      setMapState({ center: coords })
+      setCoordsState(coords);
    };
 
    const phoneRegExp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
@@ -64,7 +65,29 @@ function Complain(props) {
                   addressComent: ''
                }}
                validateOnBlur
-               onSubmit={(values) => { console.log(values) }}
+               onSubmit={(values) => {
+                  const petiton = {
+                     "TEXT": values.text,
+                     POET: 'POET',                 // поэт
+                     AUTHOR_NAME: values.name,     // имя автора жалобы
+                     AUTHOR_EMAIL: values.email,      // емейл автора жалобы
+                     AUTHOR_TEL: values.phone,   // телефон автора жалобы
+                     ADDRESS: values.address,// адрес
+                     ADDRESS_EXTENDED: values.addressComent,    // комментарий к адресу
+                     ADDRESS_COORDINATES: '55.75916251059246,37.62138180426003', // координаты
+                     PUBLIC: (values.toggle1 ? 'Y' : 'N')
+                  }
+                  backender.savePetition(petiton, function (result) {
+                     if(result.STATUS === 'OK') alert ("Ваша жалоба отправлена");
+                     // в консоли будет что-то типа такого
+                     // {STATUS: "OK", MESSAGE: "Жалоба сохранена.", DATA: ""}
+                     // то есть если статус = OK, значит жалоба успешно сохранена
+                     // если при сохранении возникнет какая-то ошибка, в статусе будет значение NEOK
+                     // а в поле MESSAGE будет комментарий к ошибке (например, что не заполнено какое-то обязательное поле)
+                 });
+
+
+               }}
                validationSchema={SignupSchema}
             >
                {({ values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty }) => (
