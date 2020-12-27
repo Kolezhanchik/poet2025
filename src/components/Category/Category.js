@@ -9,9 +9,11 @@ function Category(props) {
 
     return (
         <Link className="category"
+        style={{ backgroundImage: `url(${props.url})`}} 
             to={{ 
                 pathname: "/subcategory", 
                 data: poems, 
+                url: props.url,
                 title: props.name 
             }}
         >

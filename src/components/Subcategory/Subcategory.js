@@ -9,6 +9,7 @@ function Subcategory(props) {
     const subcat = props.location.data.map((item) => {
         return <Link
             className="subcategories__item"
+            style={{ backgroundImage: `url(${props.location.url})`}} 
             to={{
                 pathname: "/complain",
                 data: item.props.subpoems,

@@ -1,16 +1,16 @@
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className="footer">      
-      <Link to="/"className="footer__btn"><span className="footer__icon">&#128737;</span>Главная</Link>
-     <Link to="/catalog"className="footer__btn"><span className="footer__icon">&#9776;</span>КАТАЛОГ</Link>
-     <Link to="/user"className="footer__btn"><span className="footer__icon">&#9906;</span>Поиск</Link>
-      {/* <Link to="/user"className="footer__btn"><span className="footer__icon">&#4912;</span>кабинет</Link>       */}
-    </div>
+    <nav className="footer">
+      <NavLink exact to="/" activeClassName="footer__btn_active" className="footer__btn">Главная</NavLink>
+      <NavLink to="/catalog" activeClassName="footer__btn_active" className="footer__btn footer__btn-catalog">КАТАЛОГ</NavLink>
+      <NavLink to="/search" activeClassName="footer__btn_active" className="footer__btn footer__btn-search">Поиск</NavLink>
+    </nav>
   );
 }
 
 export default Footer;
+

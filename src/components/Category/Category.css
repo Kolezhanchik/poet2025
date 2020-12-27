@@ -11,7 +11,7 @@
     text-align: left;
     min-width: 327px;
     height: 100px;
-    background-image: url(../../images/2.jpg);
+    /* background-image: url(../../images/2.jpg); */
     background-size: cover;
     border-radius: 8px;
     background-position: center;

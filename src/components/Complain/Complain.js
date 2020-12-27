@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Complain.css';
 import Header from '../Header/Header';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { YMaps, Map, ZoomControl, FullscreenControl, SearchControl, GeolocationControl, Placemark } from "react-yandex-maps";
 
@@ -11,36 +11,34 @@ function Complain(props) {
    const [address, setAddress] = useState('Москва');
    const [mapState, setMapState] = useState({ center: [55.75, 37.57], zoom: 9 });
    const [coordinates, setCoordsState] = useState([55.75, 37.57]);
-   const [coordString, setCoordString] = useState("55.75, 37.57");
+   let coordString = "";
 
    function search() {
       return fetch(`https://geocode-maps.yandex.ru/1.x/?format=json&apikey=15e586b6-9e0e-4163-b84e-6eaec1f97d60&geocode=${coordString}`);
    }
 
+   useEffect(() => {   
+      coordString = coordinates[1] + ',' + coordinates[0];
+      search()
+      .then((res) => {
+         if (res.ok) { return res.json(); }
+         return Promise.reject(res.status);
+      })
+      .then((res) => {
+         setAddress(res.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.text);
+      })
+      .catch((err) => {
+         alert(err);
+      })
+   }, [coordinates])
+
    const onMapClick = (e) => {
-      
       const coords = e.get("coords");
       setMapState({center: coords})
-      setCoordsState(coords);
-      setCoordString(coordinates[1] + ',' + coordinates[0]);
-
-      // if (coordString) {
-         search()
-            .then((res) => {
-               if (res.ok) { return res.json(); }
-               return Promise.reject(res.status);
-            })
-            .then((res) => {
-               console.log(res.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.text);
-               setAddress(res.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.text);
-            })
-            .catch((err) => {
-               alert(err);
-            })
-      // }      
+      setCoordsState(coords);    
    };
 
-   const phoneRegExp = /^(?:(?:\+?7\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
+   const phoneRegExp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
    const SignupSchema = Yup.object().shape({
       text: Yup.string().typeError('Что-то пошло не так').min(20, "Пишите...").required('Обязательно'),
       name: Yup.string().typeError('Должно быть строкой').min(2, "Не менее 2-х знаков").max(50, "Не более 50-ти знаков").required('Обязательно'),
@@ -151,11 +149,11 @@ function Complain(props) {
                         </label>
                      </fieldset>
 
-                     <fieldset class="petition__fieldset">
-                        <h3 class="petition__fieldset-heading">Укажите где</h3>
+                     <fieldset className="petition__fieldset">
+                        <h3 className="petition__fieldset-heading">Укажите где</h3>
 
 
-                        <YMaps query={{ apikey: "" }}>
+                        <YMaps query={{ apikey: "" }} >
                            <Map
                               modules={["Placemark", "geocode", "geoObject.addon.balloon"]}
                               onClick={onMapClick}
@@ -170,12 +168,10 @@ function Complain(props) {
                               <GeolocationControl />
                            </Map>
                         </YMaps>
-
-                        <button type="button" class="button petition__address-button">Изменить адрес</button>
-                        <div class="petition__address">
-                           <label class="petition__label">
-                              <p class="petition__input-name">Адрес</p>
-                              <input
+                        <div className="petition__address">
+                           <label className="petition__label">
+                              <p className="petition__input-name">Адрес</p>
+                              <textarea
                                  type={"text"}
                                  onChange={handleChange}
                                  value={values.address = address}
@@ -189,8 +185,8 @@ function Complain(props) {
                               <span id="address-input-error" className="petition__input-error">Какая-то ошибка*</span>
 
                            </label>
-                           <label class="petition__label">
-                              <p class="petition__input-name">Комментарий к адресу</p>
+                           <label className="petition__label">
+                              <p className="petition__input-name">Комментарий к адресу</p>
                               <input
                                  type={"text"}
                                  onChange={handleChange}
@@ -209,7 +205,7 @@ function Complain(props) {
                         disabled={!isValid || !dirty}
                         onClick={handleSubmit}
                         type={<code>submit</code>}
-                     >Подать жалобу</button>
+                     >Отправить жалобу</button>
                   </Form>
                )}
             </Formik>

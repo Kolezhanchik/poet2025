@@ -1,46 +1,9 @@
-.user{
-    height: 70vh;
-    font-family: 'Roboto', ‘Arial’, sans-serif;
-    text-align: center;
-    color: #F9F9F9;
-    margin: 0;
-    padding: 120px 16px 486px;
-    position: relative;
-}
-
 .petition {
-    /* padding-bottom: 150px; */
     padding: 120px 16px 160px;
   }
 
-.petition__address-button {
-    background-color: #F9F9F9;
-    border: 2px solid #416981;
-    display: none;
-    align-items: center;
-    padding: 18px 18px 18px 58px;
-    width: 100%;
-    font-family: Roboto;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 1.17;
-    text-transform: capitalize;
-    color: #416981;
-    margin-bottom: 20px;
-  }
-
-  .petition__address-button::before {
-    content: '';
-    background: url('../../images/petition__address-button.svg') no-repeat center center;
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
-    display: block;
-    margin-right: 16px;
-  }
-
-  .petition__address-button_visible {
-    display: flex;
+  .petition__address{
+padding: 24px 0;
   }
 
   .petition__fieldset-heading {
@@ -51,8 +14,12 @@
     line-height: 1.17;
     color: #F9F9F9;
     margin: 0 0 20px;
+    padding: 0;
   }
 
+  .petition__map{
+    margin: 0 0 20px;
+  }
   .petition__fieldset {
     padding: 0;
     border: 0;
@@ -118,7 +85,8 @@
     
 .petition__poem-text {
     padding: 8px;
-    background: rgba(0, 119, 186, 0.4);
+    background: linear-gradient(105.93deg, #009BDD 23.19%, #007DD8 83.01%);
+    border-radius: 8px;
     border-radius: 8px;
     margin: 16px 0px;
     display: block;
@@ -228,12 +196,13 @@
     bottom: 90px;
     left: 50%;
     transform: translate(-50%, 0);
-    background: #0077BA;
+    background: linear-gradient(105.93deg, #009BDD 23.19%, #007DD8 83.01%);
     border-radius: 8px;
     color: #F9F9F9;
     border: none;
     display: block;
     text-decoration: none;
+    border: 1px solid #ffffff;
     line-height: 3;
 }
 
@@ -241,21 +210,24 @@
 outline: none;
 }
 .petition__submit::before{
-    content: '\01F7A5';
-    color: #F9F9F9;
-    border: 2px solid #F9F9F9;
-    margin-right: 16px;
-    padding: 1px 3px;
+    content: '';
+    background-image: url(../../images/icons/mail.svg);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 40px;
 }
     
 .petition__submit_disabled {
     color: rgba(249, 249, 249, 0.6);
-    background: #183B4F;
+    background: linear-gradient(105.93deg, #4da1c5 23.19%, #307ab5 83.01%);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8), 0px 0px 14px 6px rgba(0, 0, 0, 0.6);
     cursor: default;
   }
   
   .petition__submit_disabled::before {
-    content: '\01F7A5';
     opacity: .6;
   }
