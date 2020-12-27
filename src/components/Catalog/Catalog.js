@@ -1,7 +1,7 @@
 import React from 'react';
 import './Catalog.css';
 import Header from '../Header/Header';
-import categories from "./categories.json";
+import categories from "../../data/categories.json";
 import Category from "../Category/Category";
 
 function Catalog() {
@@ -10,7 +10,7 @@ function Catalog() {
     key={item.id} 
     subcategories = {item.subcategories} 
     name={item.name} 
-    // poems = {item.subcategories.poems} 
+    url = {item.url}
     />)
 
   return (

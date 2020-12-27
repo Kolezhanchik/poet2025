@@ -20,7 +20,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 101px;
     text-transform: uppercase;
     width: 33vw;
     height: 74px;
@@ -28,23 +28,35 @@
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    padding: 12px 0;
+    padding: 0;
     margin: 0;
     outline: none;
+    position: relative;
 }
 
-
-.footer__btn:active{
-    background-color:#0077BA;
+.footer__btn_active{
+    background: linear-gradient(105.93deg, #009BDD 23.19%, #007DD8 83.01%);
 }
 
-.footer__icon{
-    font-family: inherit;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    color: #F9F9F9;
-    text-decoration: none;
-    text-align: center;
-    display: block;
+.footer__btn::before{
+    content: '';
+    background-image: url(../../images/icons/shield.svg);
+    margin-right: 16px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer__btn-catalog::before{
+    background-image: url(../../images/icons/grid.svg);
+}
+
+.footer__btn-search::before{
+    background-image: url(../../images/icons/search.svg);
 }
