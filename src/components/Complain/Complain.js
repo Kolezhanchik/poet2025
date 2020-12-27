@@ -37,7 +37,7 @@ function Complain(props) {
       setCoordsState(coords);
    };
 
-   const phoneRegExp = /^((8|\+7)[\-]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+   const phoneRegExp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
    const SignupSchema = Yup.object().shape({
       text: Yup.string().typeError('Что-то пошло не так').min(20, "Пишите...").required('Обязательно'),
       name: Yup.string().typeError('Должно быть строкой').min(2, "Не менее 2-х знаков").max(50, "Не более 50-ти знаков").required('Обязательно'),
@@ -131,7 +131,7 @@ function Complain(props) {
                               type={"tel"}
                               name={"phone"}
                               className="petition__input"
-                              placeholder="+7 (123) 123-45-67"
+                              placeholder="+7(123)123-45-67"
                               onChange={handleChange}
                               value={values.phone}
                               onBlur={handleBlur}
