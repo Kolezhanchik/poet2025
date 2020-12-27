@@ -25,10 +25,10 @@ function Main() {
                     Что это такое?
                 </h3>
                 <p className="main__text">
-                   Сервис быстрого подбора стихотворени и отправки жалобы по соответсвующему адресу.
+                Сервис быстрого подбора стихотворений и отправки жалобы соответствующему адресату.
                 </p>
                 {sections}
-                <Link to="/complain" className="main__btn"> Подать жалобу</Link>
+                <Link to="/complain" onClick = {() => {window.scrollTo(0, 0)}} className="main__btn"> Подать жалобу</Link>
             </div>
         </div>
     );
