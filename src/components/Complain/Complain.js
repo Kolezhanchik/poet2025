@@ -6,9 +6,7 @@ import * as Yup from 'yup';
 import { YMaps, Map, ZoomControl, FullscreenControl, SearchControl, GeolocationControl, Placemark } from "react-yandex-maps";
 import { backender } from "../../backend-demo/backender";
 
-
 function Complain(props) {
-
    const [address, setAddress] = useState('Москва');
    const [mapState, setMapState] = useState({ center: [55.75, 37.57], zoom: 9 });
    const [coordinates, setCoordsState] = useState([55.75, 37.57]);
@@ -39,7 +37,7 @@ function Complain(props) {
       setCoordsState(coords);
    };
 
-   const phoneRegExp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+   const phoneRegExp = /^((8|\+7)[\-]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
    const SignupSchema = Yup.object().shape({
       text: Yup.string().typeError('Что-то пошло не так').min(20, "Пишите...").required('Обязательно'),
       name: Yup.string().typeError('Должно быть строкой').min(2, "Не менее 2-х знаков").max(50, "Не более 50-ти знаков").required('Обязательно'),
@@ -50,9 +48,9 @@ function Complain(props) {
    });
 
    return (
-      <div className="section">
+      <div className="petition">
          <Header title="Жалоба" />
-         <div className="petition">
+         <div className="petition__wrap">
             <Formik
                initialValues={{
                   text: (props.location.data || "Вставьте или напишите ваше стихотворение"),
@@ -68,22 +66,17 @@ function Complain(props) {
                onSubmit={(values) => {
                   const petiton = {
                      "TEXT": values.text,
-                     POET: 'POET',                 // поэт
-                     AUTHOR_NAME: values.name,     // имя автора жалобы
-                     AUTHOR_EMAIL: values.email,      // емейл автора жалобы
-                     AUTHOR_TEL: values.phone,   // телефон автора жалобы
-                     ADDRESS: values.address,// адрес
-                     ADDRESS_EXTENDED: values.addressComent,    // комментарий к адресу
-                     ADDRESS_COORDINATES: '55.75916251059246,37.62138180426003', // координаты
+                     POET: 'POET', 
+                     AUTHOR_NAME: values.name,    
+                     AUTHOR_EMAIL: values.email,     
+                     AUTHOR_TEL: values.phone,   
+                     ADDRESS: values.address,
+                     ADDRESS_EXTENDED: values.addressComent,   
+                     ADDRESS_COORDINATES: '55.75916251059246,37.62138180426003', 
                      PUBLIC: (values.toggle1 ? 'Y' : 'N')
                   }
                   backender.savePetition(petiton, function (result) {
-                     if(result.STATUS === 'OK') alert ("Ваша жалоба отправлена");
-                     // в консоли будет что-то типа такого
-                     // {STATUS: "OK", MESSAGE: "Жалоба сохранена.", DATA: ""}
-                     // то есть если статус = OK, значит жалоба успешно сохранена
-                     // если при сохранении возникнет какая-то ошибка, в статусе будет значение NEOK
-                     // а в поле MESSAGE будет комментарий к ошибке (например, что не заполнено какое-то обязательное поле)
+                     if(result.STATUS === 'OK') alert ("Ваша жалоба отправлена");                     
                  });
 
 
@@ -125,7 +118,6 @@ function Complain(props) {
                               name={"email"}
                               className="petition__input"
                               placeholder="example@mail.ru"
-                              value={values.email}
                               onChange={handleChange}
                               value={values.email}
                               onBlur={handleBlur}

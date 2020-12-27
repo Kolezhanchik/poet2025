@@ -1,10 +1,26 @@
 .petition {
+    position: relative;
+}
+
+.petition__wrap {
     padding: 120px 16px 160px;
   }
 
   .petition__address{
-padding: 24px 0;
+    padding: 24px 0;
   }
+
+  .petition__backlink{
+    background-image: url(../../images/icons/arrow-left.svg);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 71px;
+    left: 9px;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+}
 
   .petition__fieldset-heading {
     font-family: Roboto;
