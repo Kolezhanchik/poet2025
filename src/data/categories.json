@@ -2,6 +2,7 @@
     {
         "name": "Водоснабжение",
         "id": "1",
+        "url":"http://fourth.kolelena.ru/cinemood/blue.png",
         "subcategories": [
             {
                 "id": "1",
@@ -38,6 +39,7 @@
     {
         "name": "Газоснабжение",
         "id": "2",
+        "url":"http://fourth.kolelena.ru/cinemood/yellow.png",
         "subcategories": [
             {
                 "id": "1",
@@ -79,6 +81,7 @@
     {
         "name": "Электроснабжение",
         "id": "3",
+        "url":"http://fourth.kolelena.ru/cinemood/red.png",
         "subcategories": [
             {
                 "id": "1",
@@ -110,6 +113,7 @@
     {
         "name": "Благоустройство",
         "id": "4",
+        "url":"http://fourth.kolelena.ru/cinemood/green.png",
         "subcategories": [
             {
                 "id": "1",
@@ -136,6 +140,7 @@
     {
         "name": "Соседи",
         "id": "5",
+        "url":"http://fourth.kolelena.ru/cinemood/red.png",
         "subcategories": [
             {
                 "id": "1",
@@ -162,6 +167,7 @@
     {
         "name": "Работа управляющей компании",
         "id": "6",
+        "url":"http://fourth.kolelena.ru/cinemood/blue.png",
         "subcategories": [
             {
                 "id": "1",

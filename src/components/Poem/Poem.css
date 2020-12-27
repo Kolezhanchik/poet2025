@@ -1,6 +1,7 @@
 .poem{
     padding: 8px;
-    background: rgba(0, 119, 186, 0.4);
+    background: linear-gradient(105.93deg, #009BDD 23.19%, #007DD8 83.01%);
+border-radius: 8px;
     border-radius: 8px;
     margin: 16px 0px;
     display: block;
@@ -11,11 +12,11 @@
     height: 100px;
     text-overflow: clip;
     overflow: scroll;
-font-style: italic;
-font-weight: 500;
-font-size: 18px;
-color: #F9F9F9;
-opacity: 0.8;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    color: #F9F9F9;
+    opacity: 0.8;
 }
 
 .poem::-webkit-scrollbar {

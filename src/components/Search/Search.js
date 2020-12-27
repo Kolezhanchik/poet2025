@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './User.css';
+import './Search.css';
 import Header from '../Header/Header';
 import Poem from "../Poem/Poem";
 
-function User() {
+function Search() {
     const [word, setWord] = useState('');
     const [poems, setPoems] = useState([]);
     const [poem, setPoem] = useState([]);
@@ -17,13 +17,13 @@ function User() {
         setWord(event.target.value)
     };
 
-    function search() {
+    function LookForPoem() {
         return fetch(`https://raw.githubusercontent.com/IlyaGusev/PoetryCorpus/master/datasets/django/all_django.json`);
     }
 
     function handleClick(e) {
         e.preventDefault();
-        search()
+        LookForPoem()
             .then((res) => {
                 if (res.ok) { return res.json(); }
                 return Promise.reject(res.status);
@@ -47,12 +47,18 @@ function User() {
     return (
         <div className="section">
             <Header title="Поиск" />
-            <div className="user">
-                <form onClick={handleClick} name="search" className="form form_user_search">
-                    <h3 className="user__title">Что искать?</h3>
-                    <div className="user__wrapper">
-                        <input type="text" name="poemLine" placeholder="Введите слово" onChange={getVal} className="user__input " />
-                        <button className="user__btn" onClick = {poemsListChange}>
+            <div className="search">
+                <form onClick={handleClick} name="search" className="form form_search_search">
+                    <h3 className="search__title">Что искать?</h3>
+                    <p className="search__text">
+                        Ввведите в строку поиска слово(или корень слова) которое должно быть в вашем итоговом стихотворении. Вы получите список стихотворений содеражших данное слово(или корень) если таковое стихотворение было написано.
+                    </p>
+                    <p className="search__text">
+                       По клику на выбранное вами из результатов поиска стихотворение вы передете к заполнению формы жалобы с этим стихотворением
+                    </p>
+                    <div className="search__wrapper">
+                        <input type="text" name="poemLine" placeholder="Введите слово" onChange={getVal} className="search__input " />
+                        <button className="search__btn" onClick = {poemsListChange}>
                             Поиск
                         </button>
                     </div>
@@ -63,4 +69,4 @@ function User() {
     );
 }
 
-export default User;
+export default Search;
