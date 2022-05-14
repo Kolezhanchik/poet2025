@@ -1,0 +1,70 @@
+.search{
+    height: 70vh;
+    font-family: 'Roboto', ‘Arial’, sans-serif;
+    text-align: center;
+    color: #F9F9F9;
+    margin: 0;
+    padding: 120px 16px 486px;
+    position: relative;
+}
+
+.search__input{
+    width: 343px;
+    height: 40px;
+    background: rgba(83, 83, 83, 0.4);
+    border-radius: 8px;
+    padding: 0 0 0 12px;
+    margin: 24px auto;
+    display: block;
+    opacity: 0.5;
+    color: #fcf3f3;
+}
+
+.search__btn{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    width: 343px;
+    height: 64px;
+    margin: 0 auto;
+    background: linear-gradient(105.93deg, #009BDD 23.19%, #007DD8 83.01%);
+    box-shadow: 1px 2px 6px rgba(0, 163, 255, 0.4), 0px 4px 16px rgba(0, 163, 255, 0.25), 2px 16px 32px rgba(0, 163, 255, 0.2);
+    border-radius: 8px;
+    color: #F9F9F9;
+    border: none;
+    display: block;
+    text-decoration: none;
+    line-height: 3;
+    outline: none;
+    padding: 0;
+    margin: 24px auto;
+    border: 1px solid #ffffff;
+}
+
+.search__title{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;    
+    display: flex;
+    text-align: left;
+    color: #F9F9F9;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.search__text{
+    font-family: inherit;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 8px;
+    text-align: left;
+    color: #F9F9F9;
+    padding: 12px 0;
+    margin: 0 auto;
+}

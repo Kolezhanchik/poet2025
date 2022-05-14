@@ -1,0 +1,28 @@
+.main__section-picutre {
+    width: 100%;
+    height: 188px;
+    padding: 0 0 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main__section-text{
+    text-align: center;
+    max-width: 100%;
+    padding: 4px 0 16px;
+    font-size: 18px;
+line-height: 24px;
+}
+
+.main__section-subtitile{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;    
+    display: flex;
+    text-align: left;
+    color: #F9F9F9;
+    padding: 8px 0 4px;
+    margin: 0;
+}

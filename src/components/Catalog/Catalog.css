@@ -2,3 +2,15 @@
     margin: 0;
     padding: 120px 0;
 }
+
+.catalog__subtitile{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;  
+    color: #F9F9F9;
+    padding: 24px 32px;
+    margin: 0;
+    text-align: left;
+}

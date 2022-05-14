@@ -6,8 +6,7 @@
     line-height: 40px;
     text-align: left;
     margin: 0;
-    padding: 0;
-    max-width: 600px;
+    padding: 0 0 0 32px;
 } 
 
 .header{
@@ -17,4 +16,17 @@
     position: fixed;
     padding: 64px 16px 16px;
     z-index: 1;
+    max-width: 600px;
+}
+
+.header__link{
+    background-image: url(../../images/icons/arrow-left.svg);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 71px;
+    left: 9px;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
 }
